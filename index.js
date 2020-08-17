@@ -1,18 +1,24 @@
 var react= require('./reactangle');
+// const reactangle = require('./reactangle');
 
 function solvedReactangle(l,b)
 {
+
+
+
+
     console.log("This is calculation of area and perimenter of a reactangle with the value"+ l +"and " + b);
     
-    // make sure the values are not less than zero
-    if(l<=0 || b<=0)
-    {
-        console.log("Can't compute values less than zero");
-    }
-    else{
-        console.log("The area of rectangle = " + react.area(l,b));
-        console.log("The perimeter of a rectangle = " + react.perimeter(l,b));
-    }
+    react(l,b,(err, reactangle) =>{
+        if(err)
+        {
+            console.log("ERROR: ", err.message);
+        }
+        else{
+            console.log("The area of rectangle = " + reactangle.area(l,b));
+            console.log("The perimeter of a rectangle = " + reactangle.perimeter(l,b));
+        }
+    });
 }
 
 solvedReactangle(3,5);
