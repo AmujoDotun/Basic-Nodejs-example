@@ -19,6 +19,7 @@ function solvedReactangle(l,b)
             console.log("The perimeter of a rectangle = " + reactangle.perimeter(l,b));
         }
     });
+    console.log("this statement is before the output of the result");
 }
 
 solvedReactangle(3,5);
